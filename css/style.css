@@ -1384,12 +1384,37 @@ body {
   -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px; }
 
 header[role="banner"] {
-  font-family: "Lusitana", serif;
+  font-family: "Raleway", serif;
+  margin-bottom: 20px;
+  padding-top: 66.5%;
+  background: url("https://scontent-a-pao.xx.fbcdn.net/hphotos-frc3/t1.0-9/1533903_10101101625510497_1249771273_n.jpg") no-repeat center center;
+  margin-right: -1.06383%;
+  margin-left: -1.06383%;
+  color: white;
+  text-align: center;
+  padding-bottom: 20px;
+  font-weight: 700;
+  font-size: 24px;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6); }
+
+#close-resume,
+#download-resume,
+#show-resume {
+  display: none; }
+
+#resume h2 {
+  font-family: "Raleway", serif;
+  font-size: 18px;
+  margin-bottom: 20px; }
+#resume li {
+  position: relative; }
+
+#experience {
   margin-bottom: 20px; }
 
 #legal {
   text-transform: uppercase;
-  font-family: "Lusitana", serif;
+  font-family: "Raleway", serif;
   background: white;
   color: black;
   opacity: 0.6;
@@ -1414,8 +1439,12 @@ header[role="banner"] {
       margin-left: 0; }
 
   body {
-    background: url("https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash3/t1.0-9/1962749_10101151962888987_2147421921_n.jpg") no-repeat center center;
+    background: url("https://scontent-a-pao.xx.fbcdn.net/hphotos-frc3/t1.0-9/1533903_10101101625510497_1249771273_n.jpg") no-repeat center center;
     background-size: cover; }
+
+  header[role="banner"] {
+    padding-top: 0;
+    background: none; }
 
   #main {
     height: 100%; }
@@ -1436,19 +1465,37 @@ header[role="banner"] {
     left: 0;
     right: 0;
     box-sizing: border-box;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    max-width: 98%;
+    margin: 0 auto; }
+    #resume.visible {
+      display: block; }
     #resume .wrap {
       padding: 40px 20px;
       overflow-y: scroll; }
-    #resume.visible {
-      display: block; }
+    #resume .posting {
+      overflow-y: hidden;
+      clear: both;
+      margin-bottom: 10px; }
+    #resume h3 {
+      float: left; }
+    #resume h4.date {
+      float: right; }
+    #resume ul[itemprop="responsibilities"] {
+      list-style: disc; }
+      #resume ul[itemprop="responsibilities"] li {
+        margin-left: 2em; }
 
   #close-resume,
   #download-resume {
+    display: block;
     position: absolute;
     top: 15px;
     color: gray;
     text-decoration: none; }
+
+  #show-resume {
+    display: block; }
 
   #download-resume {
     left: 20px;
@@ -1490,8 +1537,11 @@ html.oldie #intro {
   html.oldie #intro:first-child {
     margin-left: 0; }
 html.oldie body {
-  background: url("https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash3/t1.0-9/1962749_10101151962888987_2147421921_n.jpg") no-repeat center center;
+  background: url("https://scontent-a-pao.xx.fbcdn.net/hphotos-frc3/t1.0-9/1533903_10101101625510497_1249771273_n.jpg") no-repeat center center;
   background-size: cover; }
+html.oldie header[role="banner"] {
+  padding-top: 0;
+  background: none; }
 html.oldie #main {
   height: 100%; }
 html.oldie #intro {
@@ -1509,18 +1559,35 @@ html.oldie #resume {
   left: 0;
   right: 0;
   box-sizing: border-box;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  max-width: 98%;
+  margin: 0 auto; }
+  html.oldie #resume.visible {
+    display: block; }
   html.oldie #resume .wrap {
     padding: 40px 20px;
     overflow-y: scroll; }
-  html.oldie #resume.visible {
-    display: block; }
+  html.oldie #resume .posting {
+    overflow-y: hidden;
+    clear: both;
+    margin-bottom: 10px; }
+  html.oldie #resume h3 {
+    float: left; }
+  html.oldie #resume h4.date {
+    float: right; }
+  html.oldie #resume ul[itemprop="responsibilities"] {
+    list-style: disc; }
+    html.oldie #resume ul[itemprop="responsibilities"] li {
+      margin-left: 2em; }
 html.oldie #close-resume,
 html.oldie #download-resume {
+  display: block;
   position: absolute;
   top: 15px;
   color: gray;
   text-decoration: none; }
+html.oldie #show-resume {
+  display: block; }
 html.oldie #download-resume {
   left: 20px;
   font-size: 13px;

@@ -9,14 +9,18 @@
 			<ol>
 			{% for job in site.data.resume.experience.jobs %}
 				<li itemscope itemtype="http://schema.org/JobPosting">
-					<h3 itemprop="title">{{ job.title }}</h3>
+					<div class="posting">
+						<h3 itemprop="title">{{ job.title }}</h3>
+						<h4 class="date">
+							<time itemprop="startDate" datetime="{{ job.start_date_format }}">{{ job.start_date }}</time>-<time itemprop="endDate" datetime="{{ job.end_date_format }}">{{ job.end_date }}</time></h4>	
+					</div>
+					<h4 itemprop="hiringOrganization" itemscope itemtype="http://schema.org/Organization">
 					<h5  itemprop="jobLocation" itemscope itemtype="http://schema.org/Place">
 						<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 						    <span itemprop="addressLocality">{{ job.city }}</span>
 						    <span itemprop="addressRegion">{{ job.state }}</span>
 						</span>
 					</h5>
-					<h4 itemprop="hiringOrganization" itemscope itemtype="http://schema.org/Organization">
 						<span itemprop="name">{{ job.organization }}</span>
 					</h4>
 					<p itemprop="description">{{ job.overview }}</p>

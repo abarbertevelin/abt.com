@@ -6,11 +6,23 @@
         showResume = doc.getElementById('show-resume'),
         closeResume = doc.getElementById('close-resume');
 
-	$(closeResume).on('click', function(e) {
+    function close() {
+        if ($(resume).hasClass('visible')) {
+            $(resume).addClass('fadeOutUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                $(this).removeClass('visible fadeOutUp');
+            });
+        }
+    }
+
+    $(closeResume).on('click', function(e) {
         e.preventDefault();
-        $(resume).addClass('fadeOutUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-            $(this).removeClass('visible fadeOutUp');
-        });
+        close();
+    });
+
+    $(doc.documentElement).keyup(function (event) {
+        if (event.keyCode === 27) {
+            close();
+        }
     });
 
     $(showResume).on('click', function(e) {

@@ -6,7 +6,9 @@ experience:
           city: ""
           state: "Washington, D.C."
           start_date: "Jan 2014"
+          start_date_format: "2014-01" #format: "2104-01-03"
           end_date: "Present"
+          end_date_format: "" #format: "2104-01-03"
           overview: "Promoted to oversee implementation of 18 No Kid Hungry childhood hunger campaigns, Cooking Matters nutrition education programs and National Ally relationships for 7 state partner organizations."
           bullets:
             - "Evaluate and continually refine partner strategies and tactics to implement programs in 2014 reaching an additional 40,000 children, serving an additional 2M meals, and providing nutrition education to 17,000 families"

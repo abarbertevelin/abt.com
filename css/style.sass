@@ -22,12 +22,38 @@ body
   -webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px
 
 header[role="banner"]
-  font-family: $lusitana
+  font-family: $raleway
+  margin-bottom: 20px
+  padding-top: 66.5%
+  background: url("https://scontent-a-pao.xx.fbcdn.net/hphotos-frc3/t1.0-9/1533903_10101101625510497_1249771273_n.jpg") no-repeat center center
+  margin-right: -(percentage($gutter) / 2)
+  margin-left: -(percentage($gutter) / 2)
+  color: $body
+  text-align: center
+  padding-bottom: 20px
+  font-weight: 700
+  font-size: 24px
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.6)
+
+#close-resume,
+#download-resume,
+#show-resume
+  display: none
+
+#resume
+  h2
+    font-family: $raleway
+    font-size: 18px
+    margin-bottom: 20px
+  li
+    position: relative      
+
+#experience
   margin-bottom: 20px
 
 #legal
   text-transform: uppercase
-  font-family: $lusitana
+  font-family: $raleway
   background: $body
   color: #000
   opacity: 0.6
@@ -44,8 +70,12 @@ header[role="banner"]
   +columns($selector:"#intro", $count:3)
 
   body
-    background: url("https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash3/t1.0-9/1962749_10101151962888987_2147421921_n.jpg") no-repeat center center
+    background: url("https://scontent-a-pao.xx.fbcdn.net/hphotos-frc3/t1.0-9/1533903_10101101625510497_1249771273_n.jpg") no-repeat center center
     background-size: cover
+
+  header[role="banner"]
+    padding-top: 0
+    background: none
 
   #main
     height: 100%
@@ -67,18 +97,36 @@ header[role="banner"]
     right: 0
     box-sizing: border-box
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5)
-    .wrap
-      padding: 40px 20px
-      overflow-y: scroll 
+    max-width: 98%
+    margin: 0 auto
     &.visible
       display: block
+    .wrap
+      padding: 40px 20px
+      overflow-y: scroll
+    .posting
+      overflow-y: hidden
+      clear: both
+      margin-bottom: 10px
+    h3
+      float: left
+    h4
+      &.date
+        float: right
+    ul[itemprop="responsibilities"]
+      list-style: disc
+      li
+        margin-left: 2em
 
   #close-resume,
   #download-resume
+    display: block
     position: absolute
     top: 15px
     color: gray
     text-decoration: none
+  #show-resume
+    display: block
 
   #download-resume
     left: 20px
