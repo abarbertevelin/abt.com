@@ -1,0 +1,13 @@
+{% include header.html %}
+	<div  role="main" id="main">
+		<article id="intro">
+			<header role="banner">
+				<h1>{{ site.data.main.name }}</h1>
+				{% if page.header_content %}{{ page.header_content }}{% endif %}
+			</header>
+			{{ site.data.main.intro }}
+			<a href="#" id="show-resume">Show</a>
+		</article>
+		{% include resume.html %}
+	</div>
+{% include footer.html %}

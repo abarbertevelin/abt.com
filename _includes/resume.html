@@ -1,0 +1,55 @@
+<section id="resume" class="animated">
+	<a href="#" title="Download Resume" id="download-resume"><i class="fa fa-file-text-o"></i>&nbsp;Download</a>
+	<a href="#" title="Close Resume" id="close-resume"><i class="fa fa-times-circle"></i></a>
+	<div class="wrap">
+		<div id="experience">
+			<header>
+				<h2>{{ site.data.resume.experience.header }}</h2>
+			</header>
+			<ol>
+			{% for job in site.data.resume.experience.jobs %}
+				<li itemscope itemtype="http://schema.org/JobPosting">
+					<h3 itemprop="title">{{ job.title }}</h3>
+					<h5  itemprop="jobLocation" itemscope itemtype="http://schema.org/Place">
+						<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+						    <span itemprop="addressLocality">{{ job.city }}</span>
+						    <span itemprop="addressRegion">{{ job.state }}</span>
+						</span>
+					</h5>
+					<h4 itemprop="hiringOrganization" itemscope itemtype="http://schema.org/Organization">
+						<span itemprop="name">{{ job.organization }}</span>
+					</h4>
+					<p itemprop="description">{{ job.overview }}</p>
+					<ul itemprop="responsibilities">
+					{% for bullet in job.bullets %}
+						<li>{{ bullet }}</li>
+					{% endfor %}
+					</ul>
+				</li>
+			{% endfor %}
+			</ol>
+		</div>
+		<div id="education">
+			<header>
+				<h2>{{ site.data.resume.education.header }}</h2>
+			</header>
+			<ol>
+			{% for institution in site.data.resume.education.institutions %}
+				<li itemscope itemtype="http://schema.org/CollegeOrUniversity">
+					<h3 itemprop="title">{{ institution.name }}</h3>
+					<h5  itemprop="jobLocation" itemscope itemtype="http://schema.org/Place">
+						<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+						    <span itemprop="addressLocality">{{ institution.city }}</span>
+						    <span itemprop="addressRegion">{{ institution.state }}</span>
+						</span>
+					</h5>
+					<h4 itemprop="hiringOrganization" itemscope itemtype="http://schema.org/Organization">
+						<span itemprop="name">{{ institution.organization }}</span>
+					</h4>
+					<p itemprop="description">{{ institution.overview }}</p>
+				</li>
+			{% endfor %}
+			</ol>
+		</div>
+	</div>
+</section>

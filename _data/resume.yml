@@ -1,0 +1,21 @@
+experience:
+    header: "Experience"
+    jobs:
+        - title: "Senior Field Manager"
+          organization: "Share Our Strength"
+          city: ""
+          state: "Washington, D.C."
+          start_date: "Jan 2014"
+          end_date: "Present"
+          overview: "Promoted to oversee implementation of 18 No Kid Hungry childhood hunger campaigns, Cooking Matters nutrition education programs and National Ally relationships for 7 state partner organizations."
+          bullets:
+            - "Evaluate and continually refine partner strategies and tactics to implement programs in 2014 reaching an additional 40,000 children, serving an additional 2M meals, and providing nutrition education to 17,000 families"
+            - "Administer $500,000+ in state budgets, $250,000+ in grant funding, reporting and progress to goal tracking "
+            - "Serve as primary liaison between state partners and Share Our Strength, policy makers, direct service providers and outside influencers "
+education:
+    header: "Education"
+    institutions:
+        - name: "University of Notre Dame"
+          city: "Notre Dame"
+          state: "IN"
+          studied: "Bachelor of Arts in English and International Peace"

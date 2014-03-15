@@ -1,0 +1,8 @@
+url:        	"http://abarbertevelin.com"
+permalink:      ":title/"
+exclude:        ["README.md", "CNAME", "*.sass", "node_modules", "Gruntfile.js", "package.json", "bower.json", "Gemfile", "bower_components"]
+owner-name:     "Jeffrey Louden"
+owner-page:     "http://abarbertevelin.com"
+owner-email:    "ashleigh@abarbertevelin.com"
+
+excerpt_separator: ""
