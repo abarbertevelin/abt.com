@@ -11,9 +11,9 @@
     function close() {
         if ($(resume).hasClass('visible')) {
             $(overlay).removeClass('visible');
+            $(intro).removeClass('fadeOut').addClass('fadeIn');
             $(resume).addClass('fadeOutUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
                 $(this).removeClass('visible fadeOutUp');
-                $(intro).removeClass('fadeOut').addClass('fadeIn');
             });
         }
     }
@@ -37,10 +37,16 @@
     $(showResume).on('click', function(e) {
         e.preventDefault();
         $(overlay).addClass('visible');
-        $(intro).removeClass('fadeInLeft').addClass('fadeOut');
+        $(intro).removeClass('fadeIn').addClass('fadeOut');
         $(resume).addClass('visible fadeInDown').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
             $(this).removeClass('fadeInDown fadeIn');
         });
     });
+
+    win.onresize = function() {
+        if (win.innerWidth <= 600) { 
+            close();
+        }
+    };
 
 })(jQuery, window, document);
