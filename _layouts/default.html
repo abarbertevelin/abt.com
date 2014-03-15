@@ -1,12 +1,12 @@
 {% include header.html %}
 	<div  role="main" id="main">
-		<article id="intro">
+		<article id="intro" class="animated fadeIn">
 			<header role="banner">
 				<h1>{{ site.data.main.name }}</h1>
 				{% if page.header_content %}{{ page.header_content }}{% endif %}
 			</header>
-			{{ site.data.main.intro }}
-			<a href="#" id="show-resume">Show</a>
+			<p>{{ site.data.main.intro }}</p>
+			<a href="#" id="show-resume"><i class="fa fa-file-text"></i>&nbsp;View resume</a>
 		</article>
 		{% include resume.html %}
 	</div>

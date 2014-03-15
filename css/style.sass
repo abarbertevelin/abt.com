@@ -7,10 +7,16 @@
 strong
   font-weight: 700
 
+a
+  color: inherit
+
 html,
 body
   height: 100%
   width: 100%
+
+body
+  font-family: $opensans
 
 +layout('#main', $layout: "container")
 
@@ -20,9 +26,11 @@ body
 #intro
   -webkit-font-smoothing: antialiased
   -webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px
+  &.hidden
+    display: none
 
 header[role="banner"]
-  font-family: $raleway
+  font-family: $josefin
   margin-bottom: 20px
   padding-top: 66.5%
   background: url("https://scontent-a-pao.xx.fbcdn.net/hphotos-frc3/t1.0-9/1533903_10101101625510497_1249771273_n.jpg") no-repeat center center
@@ -42,8 +50,9 @@ header[role="banner"]
 
 #resume
   h2
-    font-family: $raleway
-    font-size: 18px
+    font-family: $josefin
+    font-size: 24px
+    font-weight: 700
     margin-bottom: 20px
   li
     position: relative      
@@ -52,22 +61,27 @@ header[role="banner"]
   margin-bottom: 20px
 
 #legal
-  text-transform: uppercase
-  font-family: $raleway
+  font-family: $josefin
   background: $body
   color: #000
-  opacity: 0.6
-  +prefix(transition, "opacity 200ms ease-in-out")
   font-size: 12px
+  +prefix(transition, "opacity 200ms ease-in-out")
+  margin: 20px 0 10px
+  text-align: center
 
-  &:hover
-    opacity: 1
-  a
-    color: inherit
+#overlay
+  display: none
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 999
+  &.visible
+    display: block
 
-+respond-to($val: $desktopBreakpoint)
-
-  +columns($selector:"#intro", $count:3)
++respond-to($val: $tabletBreakpoint)
+  +columns($selector:"#intro", $count:6)
 
   body
     background: url("https://scontent-a-pao.xx.fbcdn.net/hphotos-frc3/t1.0-9/1533903_10101101625510497_1249771273_n.jpg") no-repeat center center
@@ -76,19 +90,26 @@ header[role="banner"]
   header[role="banner"]
     padding-top: 0
     background: none
+    text-align: left
+    padding-bottom: 0
 
   #main
     height: 100%
 
   #intro
-    margin-top: 40px
-    margin-bottom: 40px
+    margin-top: 40px !important
+    margin-bottom: 40px !important
     color: $body
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.6)
     h1
       font-size: 24px
+    p
+      margin-bottom: 10px
+      line-height: 1.3
 
   #resume
     display: none
+    overflow: hidden
     position: absolute
     background: #fff
     top: 40px
@@ -101,9 +122,14 @@ header[role="banner"]
     margin: 0 auto
     &.visible
       display: block
+      z-index: 1000
     .wrap
-      padding: 40px 20px
       overflow-y: scroll
+      position: absolute
+      top: 40px
+      right: 20px
+      left: 20px
+      bottom: 40px
     .posting
       overflow-y: hidden
       clear: both
@@ -113,6 +139,16 @@ header[role="banner"]
     h4
       &.date
         float: right
+      &.organization
+        display: inline-block
+    h5
+      display: inline-block
+    ol
+      > li
+        margin-bottom: 20px
+        &:last-child
+          margin-bottom: 0
+
     ul[itemprop="responsibilities"]
       list-style: disc
       li
@@ -127,6 +163,7 @@ header[role="banner"]
     text-decoration: none
   #show-resume
     display: block
+    text-decoration: none
 
   #download-resume
     left: 20px
@@ -147,6 +184,10 @@ header[role="banner"]
     text-align: center
     padding: 3px 2px
     border-radius: 2px
+    opacity: 0.6
+    margin: 0
+    &:hover
+      opacity: 1
     a
       height: 20px
       width: 20px
@@ -156,5 +197,8 @@ header[role="banner"]
       background: url("http://totes.awe-so.me/apple-touch-icon-57x57-precomposed.png") no-repeat center center
       background-size: contain
       display: block
+
++respond-to($val: $desktopBreakpoint)
+  +columns($selector:"#intro", $count:5)
 
 @import print
