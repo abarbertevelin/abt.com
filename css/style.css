@@ -1580,12 +1580,12 @@ header[role="banner"] {
     text-decoration: none; }
 
   #download-resume {
-    bottom: 10px;
+    bottom: 6px;
     font-size: 13px;
     text-transform: uppercase; }
 
   #close-resume {
-    top: 15px;
+    top: 10px;
     opacity: 0.7;
     -webkit-transition: opacity 200ms ease-in-out;
     -moz-transition: opacity 200ms ease-in-out;
@@ -1712,11 +1712,11 @@ html.oldie #show-resume {
   display: inline-block;
   text-decoration: none; }
 html.oldie #download-resume {
-  bottom: 10px;
+  bottom: 6px;
   font-size: 13px;
   text-transform: uppercase; }
 html.oldie #close-resume {
-  top: 15px;
+  top: 10px;
   opacity: 0.7;
   -webkit-transition: opacity 200ms ease-in-out;
   -moz-transition: opacity 200ms ease-in-out;
