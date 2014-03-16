@@ -1562,7 +1562,8 @@ header[role="banner"] {
       padding-bottom: 20px;
       border-bottom: 1px Solid lightgrey; }
       #resume ol > li:last-child {
-        margin-bottom: 0; }
+        margin-bottom: 0;
+        border-bottom: none; }
     #resume ul[itemprop="responsibilities"] {
       list-style: disc; }
       #resume ul[itemprop="responsibilities"] li {
@@ -1697,7 +1698,8 @@ html.oldie #resume {
     padding-bottom: 20px;
     border-bottom: 1px Solid lightgrey; }
     html.oldie #resume ol > li:last-child {
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      border-bottom: none; }
   html.oldie #resume ul[itemprop="responsibilities"] {
     list-style: disc; }
     html.oldie #resume ul[itemprop="responsibilities"] li {
