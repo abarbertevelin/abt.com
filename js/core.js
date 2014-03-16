@@ -12,8 +12,8 @@
         if ($(resume).hasClass('visible')) {
             $(overlay).removeClass('visible');
             $(intro).removeClass('fadeOut').addClass('fadeIn');
-            $(resume).addClass('fadeOutUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-                $(this).removeClass('visible fadeOutUp');
+            $(resume).addClass('fadeOutDown').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                $(this).removeClass('visible fadeOutDown');
             });
         }
     }

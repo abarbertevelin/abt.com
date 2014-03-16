@@ -1,5 +1,5 @@
 <section id="resume" class="animated">
-	<a href="#" title="Download Resume" id="download-resume"><i class="fa fa-file-text-o"></i>&nbsp;Download</a>
+	<a href="#" title="Download Resume" id="download-resume" class="btn invert"><i class="fa fa-file-text-o"></i>&nbsp;Download</a>
 	<a href="#" title="Close Resume" id="close-resume"><i class="fa fa-times-circle"></i></a>
 	<div class="wrap">
 		<div id="experience">
@@ -10,19 +10,21 @@
 			{% for job in site.data.resume.experience.jobs %}
 				<li itemscope itemtype="http://schema.org/JobPosting">
 					<div class="posting">
-						<h3 itemprop="title">{{ job.title }}</h3>
+						<h3 itemprop="title"><strong>{{ job.title }}</strong></h3>
 						<h4 class="date">
 							<time itemprop="startDate" datetime="{{ job.start_date_format }}">{{ job.start_date }}</time>-<time itemprop="endDate" datetime="{{ job.end_date_format }}">{{ job.end_date }}</time></h4>	
 					</div>
-					<h4 itemprop="hiringOrganization" itemscope itemtype="http://schema.org/Organization" class="organization">
-						<span itemprop="name">{{ job.organization }}</span>
-					</h4>
-					<h5  itemprop="jobLocation" itemscope itemtype="http://schema.org/Place">
-						<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-						    <span itemprop="addressLocality">{{ job.city }}</span>,&nbsp;<span itemprop="addressRegion">{{ job.state }}</span>
-						</span>
-					</h5>						
-					<p itemprop="description">{{ job.overview }}</p>
+					<div class="posting">
+						<h4 itemprop="hiringOrganization" itemscope itemtype="http://schema.org/Organization" class="organization">
+							<span itemprop="name">{{ job.organization }}</span>
+						</h4>
+						<h5  itemprop="jobLocation" itemscope itemtype="http://schema.org/Place">
+							<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+							    <span itemprop="addressLocality">{{ job.city }}</span>,&nbsp;<span itemprop="addressRegion">{{ job.state }}</span>
+							</span>
+						</h5>
+					</div>
+					<p itemprop="description" class="description">{{ job.overview }}</p>
 					<ul itemprop="responsibilities">
 					{% for bullet in job.bullets %}
 						<li>{{ bullet }}</li>
