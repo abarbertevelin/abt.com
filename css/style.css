@@ -1521,7 +1521,6 @@ header[role="banner"] {
     left: 0;
     right: 0;
     box-sizing: border-box;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     max-width: 98%;
     margin: 0 auto;
     padding: 0; }
@@ -1657,7 +1656,6 @@ html.oldie #resume {
   left: 0;
   right: 0;
   box-sizing: border-box;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   max-width: 98%;
   margin: 0 auto;
   padding: 0; }
