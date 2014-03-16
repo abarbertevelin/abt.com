@@ -1573,7 +1573,7 @@ header[role="banner"] {
     display: block;
     position: absolute;
     text-decoration: none;
-    right: 15px; }
+    right: 10px; }
 
   #show-resume {
     display: inline-block;
@@ -1707,7 +1707,7 @@ html.oldie #download-resume {
   display: block;
   position: absolute;
   text-decoration: none;
-  right: 15px; }
+  right: 10px; }
 html.oldie #show-resume {
   display: inline-block;
   text-decoration: none; }
